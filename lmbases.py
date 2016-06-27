@@ -27,7 +27,7 @@ class BSplines:
 
     @property
     def dimension(self):
-        return self.num_bases
+        return self._num_bases
 
     def design(self, x):
         return np.array(splev(np.atleast_1d(x), self._tck)).T
